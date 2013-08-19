@@ -1,4 +1,1 @@
-website
-=======
-
-DakarNug website
+My  Jekyll Boilerplate Web Site.
