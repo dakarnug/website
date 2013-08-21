@@ -53,6 +53,19 @@
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
+    <!-- start DakarNug stuff -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone.js"></script>            
+    <script type="text/javascript" src ="../js/mustache.js"></script>
+    <script type="text/javascript" src ="../js/require.js"></script>
+    <script type="text/javascript" src ="../js/vimeo.js"></script>
+
+
+    <!-- end   DakarNug stuff -->
+
+
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
@@ -83,7 +96,7 @@
 }
 
 </style>
-<a href="https://github.com/dakarnug/website">
+<a href="https://github.com/aliounedia">
 <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" style="position: absolute; top: 0; right: 0; border: 0;">
 </a>
     <div class="container-narrow">
@@ -133,47 +146,79 @@
           initializeMap();
         //]]>
       </script>
+
+   <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+    new TWTR.Widget({
+      version: 2,
+      type: 'search',
+      search: '#lnug',
+      interval: 2000,
+      title: '',
+      subject: '',
+      width: 300,
+      height: 200,
+      theme: {
+        shell: {
+          background: '#fff',
+          color: '#ffffff'
+        },
+        tweets: {
+          background: '#ffffff',
+          color: '#444444',
+          links: '#B3D46D'
+        }
+      },
+      features: {
+        scrollbar: false,
+        loop: true,
+        live: true,
+        hashtags: true,
+        timestamp: true,
+        avatars: true,
+        toptweets: true,
+        behavior: 'default'
+      }
+    }).render().start();
+    </script>
       </div>
-      <p>
-		<address>
-	      Ouest Foire , en face Brioche doree, Prolongement 
-		Station Shell Villa N 271.
-	      </address>
-
-	</p>
      </div>
-
-        <div class="span6">
-         <ul>
-		<li class="lanyrd"  ><a href ="http://lanyrd.com/2013/dakarnug/"><h2>Lanyrd</h2></a></li>
-		<li class="addcal"  ><a href ="http://lanyrd.com/2013/dakarnug/"><h2>Ajouter a votre calendrier</h2></a></li>
-	   </ul>
-        </div>
+     <div class="span6">
+	<p>
+	<address>
+	Ouest Foire , en face Brioche doree, Prolongement 
+	Station Shell Villa N 271.
+	</address>
+	</p>
+      </div>
       </div>
 	
 	<div class="row-fluid marketing">
         <div class="span6">
-	    <ul>
-		<li class="lanyrd"  ><a href ="http://lanyrd.com/2013/dakarnug/"><h2>EventBrite</h2></a></li>
-	   </ul>
-
-
-	   </ul>
+	     <ul>
+		<li class="lanyrd"  ><a href ="http://lanyrd.com/2013/dakarnug/"><h2>Lanyrd</h2></a></li>
+		<li class="addcal"  ><a href ="http://lanyrd.com/2013/dakarnug/"><h2>Ajouter a votre calendrier</h2></a></li>
+	     </ul>
         </div>
-
-        <div class="span6">
-          <h4>Ajouter un article</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-         </div>
+	   <div class="span6">
+	  	<ul>
+		<li class="lanyrd"  ><a href ="http://lanyrd.com/2013/dakarnug/"><h2>EventBrite</h2></a></li>
+	     </ul>
+        </div>
       </div>
+      <div class="row-fluid marketing">
+	  <div class="span6" id = "vimeo" >
+		<ul></ul>
+	  </div>
 
+	  <div class="span6">
+	  	{{ content }}
+        </div>
+      </div>
       <hr>
-
       <div class="footer">
         <p>&copy; Company 2013</p>
       </div>
-
     </div> <!-- /container -->
 
     <!-- Le javascript
